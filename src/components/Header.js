@@ -1,19 +1,28 @@
 import PropTypes from 'prop-types'
-import Button from './Button'
+import CartButton from './CartButton'
+import Image from '../images/PPLogo.png'
+import VIPButton from './VIPButton'
 
 const Header = ({ title, onAdd, showAdd}) => {
     
   return (
     <header className='header'>
-        <h1>{title}</h1>
-        <Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'Close' : 'Add'} onClick={onAdd}/>
+        <div className='pivotPlan'>
+          <img className='wolfLogo' src={Image} alt='Pivot Plan Logo of a wolf'/>
+          <h1>{title}</h1>
+        </div>
+        <div className='buttons'>
+          <VIPButton borderColor='gold' text='Get Full Pivot Plan' textColor='gold' />
+          <CartButton borderColor='white' text='Cart' textColor='white'/>
+        </div>
+        
     </header>
   )
 } 
 
 
 Header.defaultProps = {
-    title: "Task Tracker",
+    title: "PIVOTPLAN",
 }
 
 Header.propTypes = {
