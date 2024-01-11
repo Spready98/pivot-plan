@@ -1,11 +1,7 @@
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
-import AddTask from "./components/AddTask";
-
 const App = () => {
-
-  const [showAddTask, setShowAddTask] = useState(false)
 
   const [tasks, setTasks] = useState([
     {
@@ -48,7 +44,7 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      
+
       
     </div>
   )
